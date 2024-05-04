@@ -1,0 +1,61 @@
+body{
+    display: flex;
+align-items: center;
+justify-content: center;
+min-height: 95vh;
+background: #000;
+}
+.wrapper{
+    min-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.gradient-box{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background: linear-gradient(to right top, #000, #ababab);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.select-box select{
+    padding: 10px 15px;
+}
+.inputs input{
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0px;
+  
+}
+.inputs{
+    margin-right: 20px;
+}
+
+textarea{
+    padding: 10px;
+    width: 90%;
+}
+h4{
+    margin-bottom: 0px;
+}
+button{
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+   margin: 20px 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+.container {
+    text-align: center;
+    width: 291px;
+    margin-inline: auto;
+    background: black;
+}
+
+button {
+    padding: 20px;
+    color: yellow;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 60px;
+}
+
+.btn {
+    background-color: brown;
+    width: 120px;
+}
+
+input {
+  
+    width: 230px;
+    height: 35px;
+   
+    font-size: x-large;
+}
+.his{
+    font-size: medium;
+    color: #a9a9a9;
+    text-align: end;
+
+}
+
+/*p {
+border: 2px solid;
+width: 250px;
+height: 30px;
+margin-left: 15px;
+}*/

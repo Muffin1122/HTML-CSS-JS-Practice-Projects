@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="gradient-box">
+
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="select-box">
+                    <h4>Directions</h4>
+                    <select>
+                        <option value="to top">Top</option>
+                        <option value="to right">Right</option>
+                        <option value="to bottom">Bottom</option>
+                        <option value="to left">Left</option>
+                        <option value="to right top"> Right Top</option>
+                        <option value="to right bottom">Right Bottom</option>
+                        <option value="to left top">Left Top</option>
+                        <option value="to left bottom" selected>Left Bottom</option>
+                    </select>
+                </div>
+            </div>
+            <div class="colors">
+                <h4>Colors</h4>
+                <div class="inputs">
+                    <input type="color">
+                    <input type="color">
+                </div>
+            </div>
+        </div>
+        <textarea class="row" disabled>background: linear-gradient(to left top  #000, #ababab)</textarea>
+        <div class="row buttons">
+            <!--  <button class="referesh">Referesh Colors</button>-->
+            <button class="copy">Copy Gradient Code</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

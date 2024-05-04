@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <p id="deta"></p>
+    <h1 style=" color: yellow;">Calculator</h1>
+
+
+    <input class="his" id="history" type="text" value="">
+    <input id="result" type="text" value="" placeholder="0"><br>
+    <div class="row" style="padding-top: 15px;">
+      <button onclick="appendvalue('1')">1</button>
+      <button onclick="appendvalue('2')">2</button>
+      <button onclick="appendvalue('3')">3</button>
+      <button onclick="appendvalue('*')">*</button>
+    </div>
+    <div class="row">
+
+      <button onclick="appendvalue('4')">4</button>
+      <button onclick="appendvalue('5')">5</button>
+      <button onclick="appendvalue('6')">6</button>
+      <button onclick="appendvalue('+')">+</button>
+    </div>
+    <div class="row">
+
+      <button onclick="appendvalue('7')">7</button>
+      <button onclick="appendvalue('8')">8</button>
+      <button onclick="appendvalue('9')">9</button>
+      <button onclick="appendvalue('-')">-</button>
+    </div>
+    <div class="row">
+
+      <button onclick="reset()" title="Clear Screen">AC</button>
+      <button onclick="del()" title=" Delete">DEL</button>
+      <button onclick="appendvalue('0')">0</button>
+      <button onclick="appendvalue('/')">/</button>
+    </div>
+    <div class="row">
+      <button onclick="masterclean()" class="btn" title=" Reset Screen">MC</button>
+      <button onclick="equals()" class="btn">=</button>
+    </div>
+  </div>
+</body>
+<script>
+
+
+  resultField = document.getElementById("result");
+  historyField = document.getElementById("history");
+  function reset() {
+    resultField.value = "";
+  }
+
+  function del() {
+
+    currentValue = resultField.value;
+    resultField.value = currentValue.substring(0, currentValue.length - 1);
+  }
+  function equals() {
+    operators = ['+', '-', '*', '/'];//no string should contain operator in the end
+    expression = resultField.value;
+    lastChar = expression.slice(-1);
+    if (operators.includes(lastChar)) {
+      alert('Please correct your input or remove the unecessary operator.');
+      return;
+    }
+
+    result = eval(expression);
+    resultField.value = result;
+
+  }
+
+  function appendvalue(number) {//enter values in a string to eval
+    currentValue = resultField.value;
+           /*check no string should start with an operator
+          if (currentValue.length > 0 || !isNaN(number)) {
+            resultField.value += number;
+          }
+           document.getElementById("history").value = resultField.value;// to show history in a saperate field*/
+
+
+if (currentValue.length > 0 || !isNaN(number)) {
+  if (currentValue.includes(result)) {//empty result field whenever new string is entered to evaluate
+      resultField.value = '';
+    }
+ 
+  resultField.value += number;
+  historyField.value += number ;// increasing string of history field 
+}
+}
+
+  
+  function masterclean() {//this function emptys both the input field
+    historyField.value = "";
+    resultField.value = "";
+  }
+
+
+ 
+
+</script>
+
+</html>
