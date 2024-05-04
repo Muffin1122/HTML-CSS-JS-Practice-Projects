@@ -1,0 +1,230 @@
+header{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    padding-top: 12px;
+    top: 0;;
+}
+ header .header-nav{
+    display: flex;
+    justify-content: space-between;
+   padding: 15px 0px 10px 0px;
+}
+ header .header-nav i{
+    font-size: larger;
+    padding: 3px;
+}
+ header .bbc, footer .bbc{
+    background-color: black;
+    padding: 8px;
+    color: white;
+    display: inline;
+    font-weight: bold;
+    font-size: large;
+ 
+  
+}
+header button{
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    padding: 5px 8px 5px 8px;
+}
+header button.register-button{
+    color: white;
+    background-color: black;
+    border: none;
+
+}
+ header button.signin-button{
+    background:none;
+    color: black;
+ }
+header button.signin-button:hover{
+background-color: black;
+color: white;
+border: none;
+
+}
+
+header ul{
+   display: flex;
+   justify-content: center;
+        list-style-type: none;
+    padding: 15px;
+        overflow: hidden;
+       
+}
+
+header nav ul{
+    margin: 0;
+}
+header li a, footer li a {
+font-weight: 900;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+}
+ header li a:hover {
+    background-color: lightgrey;
+  
+  }
+footer, .signin-page footer {
+  padding-bottom: 30px;
+}
+
+ footer ul{
+    display: flex;
+         list-style-type: none;
+padding-left: 0px;
+   
+ }
+  footer li a:hover{
+    text-decoration: underline;
+  }
+
+  footer p{
+    margin-top: 10px;
+  }
+footer ul.term-ul{
+    font-size: small;
+    font-weight:initial;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container .date, .row .date {
+ font-size: small;
+color: rgb(73, 70, 70);
+
+}
+.main-page{
+padding:20px;
+margin-top:40px;}
+
+.main-page  .col-7 {width: 45%;}
+
+.main-page .col-5 {width: 45%;}
+
+.main-page .col-8{ width: 70%;}
+.main-page .col-3{width: 25%;}
+.main-page .col-3 button{
+  background-color: white;
+  padding: 15px;
+  border: 2px solid black;
+}
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 15px;
+
+}
+
+.grid-container1 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.item8 {
+  grid-area: 1 / 2 / 5 / 6;
+}
+
+
+
+
+/*Signin Page*/
+.signin-page .bbc{
+  background-color: white;
+  padding: 8px;
+  display: inline;
+  font-weight: bold;
+  font-size: large;
+}
+.signin-page h1{
+  color: white;
+}
+.signin-page input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid darkgrey;
+  background-color: black;
+  font-size: larger;
+}
+.signin-page button{
+  background-color:rgb(47, 107, 210);
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+}
+.signin-page h3{
+  color: rgb(52, 118, 231);
+}
+.signin-page h3:hover{
+text-decoration: underline;
+}
+.signin-page footer , .signin-page footer li a {
+  color: white;
+}
+.signin-page *{
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+ 
+}
+.signin-page .row::after , .main-page .row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+ .signin-page .col-7 {width: 40%;}
+
+.signin-page .col-5 {width: 40%;}
+
+@media only screen and (max-width: 500px){
+  .signin-page .col-5{
+    display: none;
+  }
+  .signin-page .col-7{
+    width: 100%;
+  }
+ .grid-container {
+  display: block;
+ }
+
+ .row{
+  display: block;
+ }
+ .main-page .col-3,
+ .main-page .col-5,
+ .main-page .col-7,
+ .main-page .col-8{
+  width: 100%;
+ }
+  header .header-buttons{
+  display: none;
+ }
+ header nav ul{
+  display: none;
+ }
+ .grid-container1{
+  display: inline-table;
+ }
+}
